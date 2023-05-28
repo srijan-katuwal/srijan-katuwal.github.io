@@ -295,7 +295,7 @@
 .page-banner {
   height: 60vh;
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("../images/offering1.jpg") fixed center;
+    url("../images/stop-sign.jpg") fixed center;
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
