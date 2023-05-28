@@ -294,10 +294,7 @@
 
 .page-banner {
   height: 60vh;
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("../images/stop-sign.jpg") fixed center;
   background-repeat: no-repeat;
-  background-size: cover;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -306,13 +303,27 @@
   padding: 1rem;
 }
 
+.page-banner-offering {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../images/offering1.jpg") fixed center;
+  background-size: cover;
+  background-position: 30% -150px;
+
+}
+
+.page-banner-faq {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../images/stop-sign.jpg") fixed center;
+  background-size: cover;
+}
+
 @media screen and (max-width: 800px) {
   #offering {
     padding-top: 4.5rem;
   }
 
   .page-banner {
-    height: 45vh;
+    height: 50vh;
   }
 }
 
