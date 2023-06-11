@@ -5,7 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css"
@@ -21,13 +20,13 @@
       rel="stylesheet"
     />
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+
     <script>
       tailwind.config = {
         theme: {
           extend: {
-            colors: {
-              clifford: "#da373d",
-            },
+            colors: {},
           },
         },
       };
@@ -37,7 +36,7 @@
         font-family: "Roboto", sans-serif;
       }
       .gradient-background {
-        background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8));
+        background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.85));
       }
       h1 {
         font-size: 32px !important;
@@ -61,6 +60,9 @@
         right: unset !important;
         left: 80px;
       }
+      .splide__track {
+        height: 100% !important;
+      }
       .media-section h1,
       .media-section h2,
       .media-section p {
@@ -69,137 +71,137 @@
     </style>
   </head>
   <body>
-    <section
-      class="media-section splide h-screen"
-      aria-label="Splide Basic HTML Example"
-    >
-      <div class="relative">
-        <div
-          class="splide__arrows splide__arrows--ltr absolute bottom-20 w-full"
-        >
-          <div class="splide__arrows px-8">
-            <button
-              class="splide__arrow splide__arrow--prev"
-              style="transform: unset"
-            >
-              <span class="w-10 h-10 border rounded-full relative">
-                <img
-                  src="./images/arrow.svg"
-                  class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
-                />
-              </span>
-            </button>
-            <button
-              class="splide__arrow splide__arrow--next"
-              style="transform: unset"
-            >
-              <span class="w-10 h-10 w-10 h-10 border rounded-full relative">
-                <img
-                  src="./images/arrow.svg"
-                  class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 rotate-180"
-                />
-              </span>
-            </button>
+    <section class="media-section">
+      <div class="splide h-full">
+        <div class="relative h-full">
+          <div
+            class="splide__arrows splide__arrows--ltr absolute bottom-20 w-full"
+          >
+            <div class="splide__arrows px-8">
+              <button
+                class="splide__arrow splide__arrow--prev"
+                style="transform: unset"
+              >
+                <span class="w-10 h-10 border rounded-full relative">
+                  <img
+                    src="./images/arrow.svg"
+                    class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+                  />
+                </span>
+              </button>
+              <button
+                class="splide__arrow splide__arrow--next"
+                style="transform: unset"
+              >
+                <span class="w-10 h-10 w-10 h-10 border rounded-full relative">
+                  <img
+                    src="./images/arrow.svg"
+                    class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 rotate-180"
+                  />
+                </span>
+              </button>
+            </div>
           </div>
-        </div>
-        <div
-          class="absolute right-8 bottom-12 z-10 !text-white"
-          id="number-pagination"
-        >
-          01&nbsp;&nbsp;|&nbsp;&nbsp;03
-        </div>
-        <div class="splide__track">
-          <ul class="splide__list">
-            <li class="splide__slide h-screen relative">
-              <picture class="w-full h-full block">
-                <source srcset="./images/home2.jpg" />
-                <img
-                  src="./images/home2.jpg"
-                  alt=""
-                  class="h-full w-full object-cover"
-                />
-              </picture>
-              <div
-                class="absolute top-0 left-0 gradient-background w-full h-full"
-              ></div>
-              <div class="absolute bottom-40 left-0 p-8">
-                <h1 class="text-white">ZAB DRIVING SCHOOL</h1>
-                <p class="h2 text-white mt-4">
-                  MTO Approved Beginner Drivers Education Course Provider -
-                  Targetting Road Safety and Flawless Driving
-                </p>
-                <h2
-                  class="text-white font-light underline underline-offset-8 mt-4"
-                >
-                  Online Theory Lessons
-                </h2>
-                <!-- <h2 class="text-white">Trained Professionals</h2> -->
-                <!-- <h2 class="text-white">One-on-One Road Driving Lessons</h2> -->
-              </div>
-            </li>
-            <li class="splide__slide h-screen">
-              <picture class="w-full h-full block">
-                <source srcset="./images/rearview.jpg" />
-                <img
-                  src="./images/rearview.jpg"
-                  alt=""
-                  class="h-full w-full object-cover"
-                />
-              </picture>
-              <div
-                class="absolute top-0 left-0 gradient-background w-full h-full"
-              ></div>
-              <div class="absolute bottom-40 left-0 p-8">
-                <h1 class="text-white">ZAB DRIVING SCHOOL</h1>
-                <p class="h2 text-white mt-4">
-                  MTO Approved Beginner Drivers Education Course Provider -
-                  Targetting Road Safety and Flawless Driving
-                </p>
-                <h2
-                  class="text-white font-light underline underline-offset-8 mt-4"
-                >
-                  Trained Professionals
-                </h2>
-              </div>
-            </li>
-            <li class="splide__slide h-screen">
-              <picture class="w-full h-full block">
-                <source srcset="./images/home3.jpg" />
-                <img
-                  src="./images/home3.jpg"
-                  alt=""
-                  class="h-full w-full object-cover"
-                />
-              </picture>
-              <div
-                class="absolute top-0 left-0 gradient-background w-full h-full"
-              ></div>
-              <div class="absolute bottom-40 left-0 p-8">
-                <h1 class="text-white">ZAB DRIVING SCHOOL</h1>
-                <p class="h2 text-white mt-4">
-                  MTO Approved Beginner Drivers Education Course Provider -
-                  Targetting Road Safety and Flawless Driving
-                </p>
-                <h2
-                  class="text-white font-light underline underline-offset-8 mt-4"
-                >
-                  One-on-One Road Driving Lessons
-                </h2>
-              </div>
-            </li>
-          </ul>
+          <div
+            class="absolute right-8 bottom-12 z-10 !text-white"
+            id="number-pagination"
+          >
+            01&nbsp;&nbsp;|&nbsp;&nbsp;03
+          </div>
+          <div class="splide__track">
+            <ul class="splide__list">
+              <li class="splide__slide h-full relative">
+                <picture class="w-full h-full block">
+                  <source srcset="./images/home2.jpg" />
+                  <img
+                    src="./images/home2.jpg"
+                    loading="lazy"
+                    class="h-full w-full object-cover"
+                  />
+                </picture>
+                <div
+                  class="absolute top-0 left-0 gradient-background w-full h-full"
+                ></div>
+                <div class="absolute bottom-36 left-0 p-8">
+                  <h1 class="text-white">ZAB DRIVING SCHOOL</h1>
+                  <p class="h2 text-white mt-4">
+                    MTO Approved Beginner Drivers Education Course Provider -
+                    Targetting Road Safety and Flawless Driving
+                  </p>
+                  <h2
+                    class="text-white font-light underline underline-offset-8 mt-4"
+                  >
+                    Online Theory Lessons
+                  </h2>
+                  <!-- <h2 class="text-white">Trained Professionals</h2> -->
+                  <!-- <h2 class="text-white">One-on-One Road Driving Lessons</h2> -->
+                </div>
+              </li>
+              <li class="splide__slide h-full">
+                <picture class="w-full h-full block">
+                  <source srcset="./images/rearview.jpg" />
+                  <img
+                    src="./images/rearview.jpg"
+                    loading="lazy"
+                    class="h-full w-full object-cover"
+                  />
+                </picture>
+                <div
+                  class="absolute top-0 left-0 gradient-background w-full h-full"
+                ></div>
+                <div class="absolute bottom-40 left-0 p-8">
+                  <h1 class="text-white">ZAB DRIVING SCHOOL</h1>
+                  <p class="h2 text-white mt-4">
+                    MTO Approved Beginner Drivers Education Course Provider -
+                    Targetting Road Safety and Flawless Driving
+                  </p>
+                  <h2
+                    class="text-white font-light underline underline-offset-8 mt-4"
+                  >
+                    Trained Professionals
+                  </h2>
+                </div>
+              </li>
+              <li class="splide__slide h-full">
+                <picture class="w-full h-full block">
+                  <source srcset="./images/about2.jpg" />
+                  <img
+                    src="./images/about2.jpg"
+                    loading="lazy"
+                    class="h-full w-full object-cover"
+                  />
+                </picture>
+                <div
+                  class="absolute top-0 left-0 gradient-background w-full h-full"
+                ></div>
+                <div class="absolute bottom-40 left-0 p-8">
+                  <h1 class="text-white">ZAB DRIVING SCHOOL</h1>
+                  <p class="h2 text-white mt-4">
+                    MTO Approved Beginner Drivers Education Course Provider -
+                    Targetting Road Safety and Flawless Driving
+                  </p>
+                  <h2
+                    class="text-white font-light underline underline-offset-8 mt-4"
+                  >
+                    One-on-One Road Driving Lessons
+                  </h2>
+                </div>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </section>
     <script>
       document.addEventListener("DOMContentLoaded", function () {
+        const mediaSection = document.querySelector("section.media-section");
+        mediaSection.style.height = window.innerHeight + "px";
         var splide = new Splide(".splide", {
           type: "loop",
           autoplay: "play",
           pauseOnHover: false,
           pauseOnFocus: false,
-          interval: 4000,
-          speed: 500,
+          interval: 5000,
           classes: {
             prev: "splide__arrow--prev",
             next: "splide__arrow--next",
