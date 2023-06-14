@@ -26,7 +26,9 @@
       tailwind.config = {
         theme: {
           extend: {
-            colors: {},
+            colors: {
+              black: "#30373F",
+            },
           },
         },
       };
@@ -36,11 +38,12 @@
         font-family: "Roboto", sans-serif;
       }
       .gradient-background {
-        background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.9));
+        background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.4));
       }
       h1 {
         font-size: 32px !important;
         font-family: "Roboto Slab", serif;
+        font-weight: 600;
       }
       h2 {
         font-size: 22px !important;
@@ -67,6 +70,9 @@
       .media-section h2,
       .media-section p {
         text-shadow: 0 0 32px black;
+      }
+      .text-shadow {
+        text-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
       }
     </style>
   </head>
@@ -123,13 +129,13 @@
                   class="absolute top-0 left-0 gradient-background w-full h-full"
                 ></div>
                 <div class="absolute bottom-36 left-0 p-8">
-                  <h1 class="text-white">ZAB DRIVING SCHOOL</h1>
-                  <p class="h2 text-white mt-4">
+                  <h1 class="text-white text-shadow">ZAB DRIVING SCHOOL</h1>
+                  <p class="h2 text-white mt-4 text-shadow">
                     MTO Approved Beginner Drivers Education Course Provider -
                     Targetting Road Safety and Flawless Driving
                   </p>
                   <h2
-                    class="text-white font-light underline underline-offset-8 mt-4"
+                    class="text-white font-light underline underline-offset-8 mt-4 text-shadow"
                   >
                     Online Theory Lessons
                   </h2>
@@ -150,13 +156,13 @@
                   class="absolute top-0 left-0 gradient-background w-full h-full"
                 ></div>
                 <div class="absolute bottom-40 left-0 p-8">
-                  <h1 class="text-white">ZAB DRIVING SCHOOL</h1>
-                  <p class="h2 text-white mt-4">
+                  <h1 class="text-white text-shadow">ZAB DRIVING SCHOOL</h1>
+                  <p class="h2 text-white mt-4 text-shadow">
                     MTO Approved Beginner Drivers Education Course Provider -
                     Targetting Road Safety and Flawless Driving
                   </p>
                   <h2
-                    class="text-white font-light underline underline-offset-8 mt-4"
+                    class="text-white font-light underline underline-offset-8 mt-4 text-shadow"
                   >
                     Trained Professionals
                   </h2>
@@ -175,13 +181,13 @@
                   class="absolute top-0 left-0 gradient-background w-full h-full"
                 ></div>
                 <div class="absolute bottom-40 left-0 p-8">
-                  <h1 class="text-white">ZAB DRIVING SCHOOL</h1>
-                  <p class="h2 text-white mt-4">
+                  <h1 class="text-white text-shadow">ZAB DRIVING SCHOOL</h1>
+                  <p class="h2 text-white mt-4 text-shadow">
                     MTO Approved Beginner Drivers Education Course Provider -
                     Targetting Road Safety and Flawless Driving
                   </p>
                   <h2
-                    class="text-white font-light underline underline-offset-8 mt-4"
+                    class="text-white font-light underline underline-offset-8 mt-4 text-shadow"
                   >
                     One-on-One Road Driving Lessons
                   </h2>
@@ -191,6 +197,89 @@
           </div>
         </div>
       </div>
+    </section>
+    <section class="about-section px-8 py-12 bg-slate-50">
+      <h1 class="text-black">About Us</h1>
+      <p class="text-lg text-black my-4">
+        Welcome to <strong>ZAB Driving School,</strong> Oakville
+      </p>
+      <p class="text-black flex items-start gap-4">
+        <img src="/images/check.svg" />
+        We are an MTO Approved - Beginner Drivers Education Course Provider. We
+        provide an optimal and affordable driver’s education program for all
+        members of our society; including but not limited to teen drivers, new
+        drivers, nervous drivers, senior citizens and new immigrants.
+      </p>
+      <p class="text-black flex items-start gap-4 mt-4">
+        <img src="/images/check.svg" />
+        The present-day teenagers have a very busy routine. They must meet the
+        requirements of their schooling, sports activities, jobs and leisure
+        time with friends. Amongst all this, they have no time to attend driving
+        school course in the class. We have therefore planned to provide online
+        training for Beginner Drivers Education Course.
+      </p>
+      <p class="text-black flex items-start gap-4 mt-4">
+        <img src="/images/check.svg" />
+        Our students can now take advantage of our digital courses in the
+        comfort of their homes. The online offering allows students to avail our
+        year-round training at any time as per their own schedules. In-car
+        sessions will be provided on the roads of Oakville and Brampton by our
+        most experienced and qualified staff.
+      </p>
+    </section>
+
+    <section class="mission-section px-8 py-12 relative">
+      <div
+        style="background-image: url('./images/about2.jpg')"
+        class="h-full w-full absolute top-0 left-0 -z-10 bg-cover bg-scroll blur-sm bg-center"
+      ></div>
+      <div
+        class="absolute top-0 left-0 gradient-background w-full h-full -z-10"
+      ></div>
+      <h1 class="text-slate-100 text-shadow">Our Mission</h1>
+      <p class="text-lg text-slate-100 mt-6 text-shadow">
+        High standard driver&#39;s education to ensure safe and flawless
+        driving.
+      </p>
+      <p
+        class="text-slate-100 flex items-start gap-4 text-shadow mt-6 text-shadow"
+      >
+        After completion of our program, we want you to walk away from us
+        feeling confident and safe behind the wheels. ZAB driving school
+        students are taught by a group of highly qualified instructors who
+        understand the challenges of beginner drivers. Our staff is trained to
+        deliver guidance on what to anticipate on the roads and highways to
+        assist safe driving habits. This is not enough! An instructor should be
+        able to offer solutions catering to each student’s individual problems.
+        That is the speciality our experienced staff ultimately brings to the
+        table with the goal of allowing for defensive driving. An instructor has
+        to treat each student differently catering for his/her background,
+        ability to undertake pressures of driving and ability to grasp the
+        concepts.
+      </p>
+      <p
+        class="text-slate-100 flex items-start gap-4 text-shadow mt-6 text-shadow"
+      >
+        We are committed to teaching defensive driving techniques to teenagers
+        and adults in an environment where learning is fun, schedules are
+        flexible, and total customer satisfaction is guaranteed.
+      </p>
+      <p class="text-slate-100 flex items-start gap-4 text-shadow mt-6">
+        <img src="/images/check.svg" />
+        It&#39;s very easy just give us a call or text us or fill up your
+        request on ‘Register’ tab of this website and we can call you back to
+        start the process of Beginner Drivers Education course.
+      </p>
+      <p class="text-slate-100 flex items-start gap-4 text-shadow mt-2">
+        <img src="/images/check.svg" />
+        Register form is not the requirement if complete course is not to be
+        taken. You may call or text only for in car practice lessons or use of
+        car for the test.
+      </p>
+      <p class="text-slate-100 flex items-start gap-4 text-shadow mt-2">
+        <img src="/images/check.svg" />
+        You may also email us for any questions or inquiries.
+      </p>
     </section>
     <script>
       document.addEventListener("DOMContentLoaded", function () {
