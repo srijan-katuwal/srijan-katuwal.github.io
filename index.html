@@ -38,14 +38,16 @@
         font-family: "Roboto", sans-serif;
       }
       .gradient-background {
-        background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.4));
+        background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7));
       }
-      h1 {
+      h1,
+      .h1 {
         font-size: 32px !important;
         font-family: "Roboto Slab", serif;
         font-weight: 600;
       }
-      h2 {
+      h2,
+      .h2 {
         font-size: 22px !important;
         font-family: "Roboto Slab", serif;
       }
@@ -74,16 +76,138 @@
       .text-shadow {
         text-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
       }
+      .pricing-section > div {
+        background-color: #080a0b;
+      }
+      .splide__slide__second img {
+        background-position: 90%;
+      }
+      .price-card {
+        height: 330px;
+      }
+      header.navigation nav ul {
+        max-width: 0;
+        overflow: hidden;
+        padding: 6em 0;
+        transition: all 0.3s ease-in-out;
+      }
+      header.navigation.open nav ul {
+        max-width: 100%;
+        width: 100%;
+        overflow: hidden;
+        padding: 6em 1.5em;
+      }
+      #about,
+      #offering {
+        padding-top: 90px;
+        margin-top: -40px;
+      }
     </style>
   </head>
+  <div class="absolute top-0 left-0 gradient-background w-full h-full"></div>
   <body>
+    <header class="navigation fixed z-10 w-full bg-white shadow-black top-0">
+      <nav class="relative">
+        <div class="pl-4 pr-6 flex justify-between items-center h-20">
+          <a href="/">
+            <img class="h-16" src="./images/logo.png" />
+          </a>
+          <img
+            id="nav-toggler"
+            src="./images/burger.svg"
+            onclick="toggleNav()"
+          />
+        </div>
+        <ul class="absolute flex flex-col gap-1 top-0 bg-white h-screen">
+          <li class="absolute top-1 left-4">
+            <a href="/"><img class="h-16" src="./images/logo.png" /></a>
+          </li>
+          <li class="absolute top-6 right-6">
+            <img src="./images/times.svg" onclick="toggleNav()" />
+          </li>
+          <li class="p-2">
+            <a
+              class="underline underline-offset-4"
+              href="/"
+              onclick="redirectPage()"
+              >HOME</a
+            >
+          </li>
+          <li class="p-2">
+            <a
+              class="underline underline-offset-4"
+              href="/index.html#about"
+              onclick="redirectPage()"
+              >ABOUT US</a
+            >
+          </li>
+          <li class="p-2">
+            <a
+              class="underline underline-offset-4"
+              href="/index.html#mission"
+              onclick="redirectPage()"
+              >OUR MISSION</a
+            >
+          </li>
+          <li class="p-2">
+            <a
+              class="underline underline-offset-4"
+              href="/index.html#offering"
+              onclick="redirectPage()"
+              >OUR OFFERING</a
+            >
+          </li>
+          <li class="p-2">
+            <a
+              class="underline underline-offset-4"
+              href="/index.html#pricing"
+              onclick="redirectPage()"
+              >PRICING</a
+            >
+          </li>
+          <li class="p-2">
+            <a
+              class="underline underline-offset-4"
+              href="/ContactUs.html"
+              onclick="redirectPage()"
+              >FAQ</a
+            >
+          </li>
+          <li class="p-2">
+            <a
+              class="underline underline-offset-4"
+              href="/ContactUs.html"
+              onclick="redirectPage()"
+              >INQUIRY FORM</a
+            >
+          </li>
+          <li class="p-2">
+            <a
+              class="underline underline-offset-4"
+              href="/ContactUs.html"
+              onclick="redirectPage()"
+              >SIGN IN</a
+            >
+          </li>
+          <li class="p-2">
+            <a
+              class="underline underline-offset-4"
+              href="/ContactUs.html"
+              onclick="redirectPage()"
+              >REGISTER</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+
     <section class="media-section">
-      <div class="splide h-full">
+      <div id="mediaSplide" class="splide h-full">
         <div class="relative h-full">
           <div
             class="splide__arrows splide__arrows--ltr absolute bottom-20 w-full"
           >
-            <div class="splide__arrows px-8">
+            <div class="splide__arrows px-6">
               <button
                 class="splide__arrow splide__arrow--prev"
                 style="transform: unset"
@@ -110,7 +234,7 @@
           </div>
           <div
             class="absolute right-8 bottom-12 z-10 !text-white"
-            id="number-pagination"
+            id="media-pagination"
           >
             01&nbsp;&nbsp;|&nbsp;&nbsp;03
           </div>
@@ -118,9 +242,9 @@
             <ul class="splide__list">
               <li class="splide__slide h-full relative">
                 <picture class="w-full h-full block">
-                  <source srcset="./images/home2.jpg" />
+                  <source srcset="./images/about3.jpg" />
                   <img
-                    src="./images/home2.jpg"
+                    src="./images/about3.jpg"
                     loading="lazy"
                     class="h-full w-full object-cover"
                   />
@@ -128,7 +252,7 @@
                 <div
                   class="absolute top-0 left-0 gradient-background w-full h-full"
                 ></div>
-                <div class="absolute bottom-36 left-0 p-8">
+                <div class="absolute bottom-36 left-0 px-6 py-8">
                   <h1 class="text-white text-shadow">ZAB DRIVING SCHOOL</h1>
                   <p class="h2 text-white mt-4 text-shadow">
                     MTO Approved Beginner Drivers Education Course Provider -
@@ -143,11 +267,11 @@
                   <!-- <h2 class="text-white">One-on-One Road Driving Lessons</h2> -->
                 </div>
               </li>
-              <li class="splide__slide h-full">
+              <li class="splide__slide h-full splide__slide__second">
                 <picture class="w-full h-full block">
-                  <source srcset="./images/rearview.jpg" />
+                  <source srcset="./images/IMG_4791001.jpg" />
                   <img
-                    src="./images/rearview.jpg"
+                    src="./images/IMG_4791001.jpg"
                     loading="lazy"
                     class="h-full w-full object-cover"
                   />
@@ -155,7 +279,7 @@
                 <div
                   class="absolute top-0 left-0 gradient-background w-full h-full"
                 ></div>
-                <div class="absolute bottom-40 left-0 p-8">
+                <div class="absolute bottom-40 left-0 px-6 py-8">
                   <h1 class="text-white text-shadow">ZAB DRIVING SCHOOL</h1>
                   <p class="h2 text-white mt-4 text-shadow">
                     MTO Approved Beginner Drivers Education Course Provider -
@@ -180,7 +304,7 @@
                 <div
                   class="absolute top-0 left-0 gradient-background w-full h-full"
                 ></div>
-                <div class="absolute bottom-40 left-0 p-8">
+                <div class="absolute bottom-40 left-0 px-6 py-8">
                   <h1 class="text-white text-shadow">ZAB DRIVING SCHOOL</h1>
                   <p class="h2 text-white mt-4 text-shadow">
                     MTO Approved Beginner Drivers Education Course Provider -
@@ -198,7 +322,8 @@
         </div>
       </div>
     </section>
-    <section class="about-section px-8 py-12 bg-slate-50">
+
+    <section id="about" class="about-section px-6 pb-16 bg-slate-50">
       <h1 class="text-black">About Us</h1>
       <p class="text-lg text-black my-4">
         Welcome to <strong>ZAB Driving School,</strong> Oakville
@@ -228,29 +353,223 @@
       </p>
     </section>
 
-    <div
-      style="background-image: url('./images/offering1.jpg'); height: 260px"
-      class="w-full bg-cover bg-scroll bg-center"
-    ></div>
-    <section class="mission-section px-8 py-12 bg-slate-50">
-      <h1 class="text-black">Our Mission</h1>
+    <section id="mission" class="mission-section">
+      <div
+        style="background-image: url('./images/offering1.jpg'); height: 260px"
+        class="w-full bg-cover bg-scroll bg-center"
+      ></div>
+      <div class="px-6 pt-10">
+        <h1 class="text-black">Our Mission</h1>
+        <p class="text-lg text-black mt-4">
+          High standard driver&#39;s education to ensure safe and flawless
+          driving.
+        </p>
+        <p class="text-black flex items-start gap-4 mt-4">
+          After completion of our program, we want you to walk away from us
+          feeling confident and safe behind the wheels. ZAB driving school
+          students are taught by a group of highly qualified instructors who
+          understand the challenges of beginner drivers. Our staff is trained to
+          deliver guidance on what to anticipate on the roads and highways to
+          assist safe driving habits. This is not enough! An instructor should
+          be able to offer solutions catering to each student’s individual
+          problems. That is the speciality our experienced staff ultimately
+          brings to the table with the goal of allowing for defensive driving.
+          An instructor has to treat each student differently catering for
+          his/her background, ability to undertake pressures of driving and
+          ability to grasp the concepts.
+        </p>
+        <p class="text-black flex items-start gap-4 mt-6">
+          We are committed to teaching defensive driving techniques to teenagers
+          and adults in an environment where learning is fun, schedules are
+          flexible, and total customer satisfaction is guaranteed.
+        </p>
+        <p class="text-black flex items-start gap-4 mt-6">
+          <img src="/images/check.svg" />
+          It&#39;s very easy just give us a call or text us or fill up your
+          request on ‘Register’ tab of this website and we can call you back to
+          start the process of Beginner Drivers Education course.
+        </p>
+        <p class="text-black flex items-start gap-4 mt-2">
+          <img src="/images/check.svg" />
+          Register form is not the requirement if complete course is not to be
+          taken. You may call or text only for in car practice lessons or use of
+          car for the test.
+        </p>
+        <p class="text-black flex items-start gap-4 mt-2">
+          <img src="/images/check.svg" />
+          You may also email us for any questions or inquiries.
+        </p>
+      </div>
+    </section>
+
+    <section id="pricing" class="pricing-section pt-20">
+      <div class="text-white pt-14 pb-12">
+        <h1 class="px-6">Pricing</h1>
+        <p class="text-white mt-2 mb-8 px-6 font-sans text-base">
+          For enrolement and payment please call on 289-400-8115. Payment is
+          accepted through debt/credit card or interac e-transfer. Prices are
+          subject to change without notice.
+        </p>
+        <div
+          id="priceSplide"
+          class="splide"
+          role="group"
+          aria-label="Splide Basic HTML Example"
+        >
+          <div class="splide__track">
+            <ul class="splide__list">
+              <li class="splide__slide px-6">
+                <div
+                  class="flex flex-col border border-amber-100 w-full px-6 py-8 rounded bg-amber-50/10 price-card"
+                >
+                  <span
+                    class="w-max bg-amber-50/20 text-amber-100 border border-amber-200 rounded-full py-2 px-4 text-sm"
+                    >Complete BDE Course</span
+                  >
+                  <span class="text-4xl font-medium text-white font-sans mt-6"
+                    >$550</span
+                  >
+                  <span class="text-amber-100 text-sm mt-2"
+                    >$550 + HST = $621.50</span
+                  >
+                  <ul class="mt-8 flex flex-col gap-3">
+                    <li class="flex items-center gap-2 text-amber-100">
+                      <span
+                        class="text-white border w-6 h-6 border-amber-100 rounded-full flex items-center justify-center"
+                        >&#x2713;</span
+                      >
+                      20 Hrs Digital Course
+                    </li>
+                    <li class="flex items-center gap-2 text-amber-100">
+                      <span
+                        class="text-white border w-6 h-6 border-amber-100 rounded-full flex items-center justify-center"
+                        >&#x2713;</span
+                      >
+                      10 Hrs online assignment
+                    </li>
+                    <li class="flex items-center gap-2 text-amber-100">
+                      <span
+                        class="text-white border w-6 h-6 border-amber-100 rounded-full flex items-center justify-center"
+                        >&#x2713;</span
+                      >
+                      10 Hrs in car lessons
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="splide__slide px-6">
+                <div
+                  class="flex flex-col border border-amber-100 w-full px-6 py-8 rounded bg-amber-50/10 price-card"
+                >
+                  <span
+                    class="w-max bg-amber-50/20 text-amber-100 border border-amber-200 rounded-full py-2 px-4 text-sm"
+                    >Use of Car for G1 Test</span
+                  >
+                  <span class="text-4xl font-medium text-white font-sans mt-6"
+                    >$106</span
+                  >
+                  <span class="text-amber-100 text-sm mt-2"
+                    >$106 + HST = $119.78</span
+                  >
+                </div>
+              </li>
+              <li class="splide__slide px-6">
+                <div
+                  class="flex flex-col border border-amber-100 w-full px-6 py-8 rounded bg-amber-50/10 price-card"
+                >
+                  <span
+                    class="w-max bg-amber-50/20 text-amber-100 border border-amber-200 rounded-full py-2 px-4 text-sm"
+                    >Use of Car for G2 Test</span
+                  >
+                  <span class="text-4xl font-medium text-white font-sans mt-6"
+                    >$133</span
+                  >
+                  <span class="text-amber-100 text-sm mt-2"
+                    >$133 +HST = $150.29</span
+                  >
+                </div>
+              </li>
+              <li class="splide__slide px-6">
+                <div
+                  class="flex flex-col border border-amber-100 w-full px-6 py-8 rounded bg-amber-50/10 price-card"
+                >
+                  <span
+                    class="w-max bg-amber-50/20 text-amber-100 border border-amber-200 rounded-full py-2 px-4 text-sm"
+                    >One Hour in Car Lesson</span
+                  >
+                  <span class="text-4xl font-medium text-white font-sans mt-6"
+                    >$44</span
+                  >
+                  <span class="text-amber-100 text-sm mt-2"
+                    >$44 + HST = $49.72</span
+                  >
+                </div>
+              </li>
+              <li class="splide__slide px-6">
+                <div
+                  class="flex flex-col border border-amber-100 w-full px-6 py-8 rounded bg-amber-50/10 price-card"
+                >
+                  <span
+                    class="w-max bg-amber-50/20 text-amber-100 border border-amber-200 rounded-full py-2 px-4 text-sm"
+                    >05 Hours In Car Lessons</span
+                  >
+                  <span class="text-4xl font-medium text-white font-sans mt-6"
+                    >$203</span
+                  >
+                  <span class="text-amber-100 text-sm mt-2"
+                    >$203 + HST = $229.39</span
+                  >
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="flex items-center justify-between px-6 mt-4">
+            <div class="splide__arrows splide__arrows--ltr w-full static">
+              <div class="splide__arrows flex gap-3">
+                <button
+                  class="splide__arrow splide__arrow--prev static"
+                  style="transform: unset"
+                >
+                  <span class="w-10 h-10 border rounded-full relative">
+                    <img
+                      src="./images/arrow.svg"
+                      class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+                    />
+                  </span>
+                </button>
+                <button
+                  class="splide__arrow splide__arrow--next static"
+                  style="transform: unset"
+                >
+                  <span
+                    class="w-10 h-10 w-10 h-10 border rounded-full relative"
+                  >
+                    <img
+                      src="./images/arrow.svg"
+                      class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 rotate-180"
+                    />
+                  </span>
+                </button>
+              </div>
+            </div>
+            <div class="!text-white" id="pricing-pagination">
+              01&nbsp;&nbsp;|&nbsp;&nbsp;05
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <p class="text-sm mt-6 px-6 font-sans">
+      Note:<br />
+      Rates may increase for the road test on centers other than the local test
+      center, depending on its distance. Interac etransfer can be made on
+    </p>
+
+    <section id="offering" class="offering-section px-6">
+      <h1 class="text-black">Our Offering</h1>
       <p class="text-lg text-black mt-4">
-        High standard driver&#39;s education to ensure safe and flawless
-        driving.
-      </p>
-      <p class="text-black flex items-start gap-4 mt-4">
-        After completion of our program, we want you to walk away from us
-        feeling confident and safe behind the wheels. ZAB driving school
-        students are taught by a group of highly qualified instructors who
-        understand the challenges of beginner drivers. Our staff is trained to
-        deliver guidance on what to anticipate on the roads and highways to
-        assist safe driving habits. This is not enough! An instructor should be
-        able to offer solutions catering to each student’s individual problems.
-        That is the speciality our experienced staff ultimately brings to the
-        table with the goal of allowing for defensive driving. An instructor has
-        to treat each student differently catering for his/her background,
-        ability to undertake pressures of driving and ability to grasp the
-        concepts.
+        Our BDE program ensures the mandatory:
       </p>
       <p class="text-black flex items-start gap-4 mt-6">
         We are committed to teaching defensive driving techniques to teenagers
@@ -259,46 +578,124 @@
       </p>
       <p class="text-black flex items-start gap-4 mt-6">
         <img src="/images/check.svg" />
-        It&#39;s very easy just give us a call or text us or fill up your
-        request on ‘Register’ tab of this website and we can call you back to
-        start the process of Beginner Drivers Education course.
+        20 hours online course
       </p>
       <p class="text-black flex items-start gap-4 mt-2">
         <img src="/images/check.svg" />
-        Register form is not the requirement if complete course is not to be
-        taken. You may call or text only for in car practice lessons or use of
-        car for the test.
+        10 hours of digital course
       </p>
       <p class="text-black flex items-start gap-4 mt-2">
         <img src="/images/check.svg" />
-        You may also email us for any questions or inquiries.
+        10 hours of in-car one on one lessons
+      </p>
+      <p class="text-black flex items-start gap-4 mt-6">
+        Our Beginner Driver Education Programs is affordable to the people of
+        all ages with an easy payment plan.
+      </p>
+      <p class="text-black flex items-start gap-4 mt-4">
+        Our in class and in car instructors are certified instructors by the
+        Ministry of Transportation. They are highly experienced, professional,
+        patient and dedicated to creating a conducive learning environment.
+        Google Reviews of our students trained by ZDS speak of professionalism
+        of our staff.
+      </p>
+      <p class="text-black flex items-start gap-4 mt-4">
+        Our online/digital courses are designed to be interesting and are
+        equipped with all the necessary advanced education tools and videos. Our
+        aim is to enable a fun learning experience for our students which does
+        not become monotonous.
+      </p>
+      <p class="text-black flex items-start gap-4 mt-4">
+        Driving courses are available all year round. After registration, we
+        offer students to pick any time of the day and go through a digital
+        program. You may postpone your training if you have other commitments
+        with work or school. If you are unable to attend a session after
+        registration, make-up sessions are an option within a period of one year
+        for digital learning as well as the in- car lessons.
+      </p>
+      <p class="text-black flex items-start gap-4 mt-4">
+        Techniques: ZAB Driving School classes are designed for you to pass your
+        driving test displaying safe and expert driving skills with a strong
+        focus on defensives driving techniques. At ZAB Driving School, we teach
+        emergency maneuvers and techniques to prevent the consequences of
+        distracted driving. We aim to inculcate safe driving habits and
+        eventually hope to help the Ministry reduce the overall road-accident
+        occurrences in Ontario.
+      </p>
+      <p class="text-black flex items-start gap-4 mt-4">
+        G1 license holders may be able to qualify for a 4-month reduction in the
+        12-month minimum G1- licensing period. After passing G2 road test,
+        students qualified from ZAB Driving School may also benefit from a
+        reduction in insurance premiums.
+      </p>
+      <p class="text-black flex items-start gap-4 mt-4">
+        Our website also provides you free course on how to pass your G1 written
+        test and there another paid course on how to pass your G2 road test.
+      </p>
+      <p class="text-black flex items-start gap-4 mt-4">
+        If you have any questions or would like more information regarding our
+        program, please feel free to contact us at (289)-400-8115
       </p>
     </section>
-
-    <section class="pricing-section"></section>
     <script>
       document.addEventListener("DOMContentLoaded", function () {
         const mediaSection = document.querySelector("section.media-section");
         mediaSection.style.height = window.innerHeight + "px";
-        var splide = new Splide(".splide", {
+        const mediaSplide = new Splide("#mediaSplide", {
           type: "loop",
           autoplay: "play",
           pauseOnHover: false,
           pauseOnFocus: false,
           interval: 5000,
           classes: {
-            prev: "splide__arrow--prev",
-            next: "splide__arrow--next",
+            prev: "#mediaSplide splide__arrow--prev",
+            next: "#mediaSplide splide__arrow--next",
           },
           pagination: false,
         });
-        splide.on("moved", function (newIndex) {
-          document.querySelector("#number-pagination").innerHTML = `0${
+        mediaSplide.on("moved", function (newIndex) {
+          document.querySelector("#media-pagination").innerHTML = `0${
             newIndex + 1
           }&nbsp;&nbsp;|&nbsp;&nbsp;03`;
         });
-        splide.mount();
+        mediaSplide.mount();
+
+        const pricingSection = document.querySelector(".pricing-section");
+        const priceSplide = new Splide("#priceSplide", {
+          type: "loop",
+          autoplay: "play",
+          pauseOnHover: false,
+          pauseOnFocus: false,
+          interval: 10000,
+          classes: {
+            prev: "#priceSplide splide__arrow--prev",
+            next: "#priceSplide splide__arrow--next",
+          },
+          pagination: false,
+        });
+        priceSplide.on("moved", function (newIndex) {
+          document.querySelector("#pricing-pagination").innerHTML = `0${
+            newIndex + 1
+          }&nbsp;&nbsp;|&nbsp;&nbsp;05`;
+        });
+        priceSplide.mount();
       });
+
+      let navClass = "";
+      let navbar = document.querySelector("header.navigation");
+      function toggleNav() {
+        if (navbar.classList.contains("open")) {
+          navbar.classList.remove("open");
+        } else {
+          navbar.classList.add("open");
+        }
+      }
+      function redirectPage() {
+        toggleNav();
+        setTimeout(function () {
+          return true;
+        }, 500);
+      }
     </script>
   </body>
 </html>
