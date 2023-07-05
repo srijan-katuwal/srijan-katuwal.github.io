@@ -1,378 +1,291 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    
-    <!-- SEO Meta Tags -->
-    
-    <!-- Website Title -->
-    <title>ZAB Driving School</title>
-    
-    <!-- Styles -->
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:500,700&display=swap&subset=latin-ext" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600&display=swap&subset=latin-ext" rel="stylesheet">
-    <link href="https://www.zabdrivingschool.com/css/bootstrap.css" rel="stylesheet">
-    <link href="https://www.zabdrivingschool.com/css/fontawesome-all.css" rel="stylesheet">
-    <link href="https://www.zabdrivingschool.com/css/swiper.css" rel="stylesheet">
-	<link href="https://www.zabdrivingschool.com/css/magnific-popup.css" rel="stylesheet">
-	<link href="https://www.zabdrivingschool.com/css/styles.css" rel="stylesheet">
-    <link rel="stylesheet" href="./css/mystyles.css">
-    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script> -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,400;1,500;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
 
-	
-	<!-- Favicon  -->
-    <link rel="icon" href="images/Picture1.png">
-</head>
-<body data-spy="scroll" data-target=".fixed-top">
-    
-    <!-- Preloader -->
-	<div class="spinner-wrapper">
-        <div class="spinner">
-            <div class="bounce1"></div>
-            <div class="bounce2"></div>
-            <div class="bounce3"></div>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              black: "#30373F",
+            },
+          },
+        },
+      };
+    </script>
+	<link href="./css/mystyles.css" rel="stylesheet">
+
+  </head>
+
+  <body>
+    <header class="navigation fixed z-10 w-full bg-white shadow-black top-0">
+      <nav class="relative">
+        <div class="pl-4 pr-6 flex justify-between items-center h-20">
+          <a href="/">
+            <img class="h-16" src="./images/logo.png" />
+          </a>
+          <img
+            id="nav-toggler"
+            src="./images/burger.svg"
+            onclick="toggleNav()"
+          />
         </div>
-    </div>
-    <!-- end of preloader -->
-    
-
-   <!-- Navbar -->
-   <nav class="navbar navbar-expand-md navbar-dark navbar-custom fixed-top">
-    <!-- Text Logo - Use this if you don't have a graphic logo -->
-    <!-- <a class="navbar-brand logo-text page-scroll" href="index.html">Aria</a> -->
-
-    <!-- Image Logo -->
-    <a class="navbar-brand logo-image" href="index.html"><img loading="lazy" src="images/logo.png" alt="alternative"></a>
-    
-    <!-- Mobile Menu Toggle Button -->
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-awesome fas fa-bars"></span>
-        <span class="navbar-toggler-awesome fas fa-times"></span>
-    </button>
-    <!-- end of mobile menu toggle button -->
-
-    <div class="collapse navbar-collapse" id="navbarsExampleDefault">
-        <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-                <a class="nav-link page-scroll" href="index.html">HOME </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link page-scroll" href="AboutUs.html" >ABOUT US</a>
-                </li>
-            <li class="nav-item">
-                <a class="nav-link page-scroll" href="OurMission.html">OUR MISSION</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link page-scroll" href="OurOffering.html">OUR OFFERING</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link page-scroll" href="faq.html">FAQ</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link page-scroll" href="Pricing.html">PRICING</a>
-            </li>
-
-            <li class="nav-item">
-                <a class="nav-link page-scroll" href="ContactUs.html">INQUIRY FORM</a>
-            </li>
-            
-           
-            <li class="nav-item">
-                <a class="nav-link page-scroll" href="https://zabdrivingschool.trubicars.ca/auth/mfa/signup.php" target="_blank">REGISTER</a>
-            </li>
- <li class="nav-item">
-                <a class="nav-link page-scroll" href="https://zabdrivingschool.trubicars.ca/auth/mfa/login.php" target="_blank">SIGN IN</a>
-            </li>
-        
+        <ul class="absolute flex flex-col gap-1 top-0 bg-white h-screen">
+          <li class="absolute top-1 left-4">
+            <a href="/"><img class="h-16" src="./images/logo.png" /></a>
+          </li>
+          <li class="absolute top-6 right-6">
+            <img src="./images/times.svg" onclick="toggleNav()" />
+          </li>
+          <li class="p-2">
+            <a
+              class="underline underline-offset-4"
+              href="/"
+              onclick="redirectPage()"
+              >HOME</a
+            >
+          </li>
+          <li class="p-2">
+            <a
+              class="underline underline-offset-4"
+              href="/index.html#about"
+              onclick="redirectPage()"
+              >ABOUT US</a
+            >
+          </li>
+          <li class="p-2">
+            <a
+              class="underline underline-offset-4"
+              href="/index.html#mission"
+              onclick="redirectPage()"
+              >OUR MISSION</a
+            >
+          </li>
+          <li class="p-2">
+            <a
+              class="underline underline-offset-4"
+              href="/OurOffering.html"
+              onclick="redirectPage()"
+              >OUR OFFERING</a
+            >
+          </li>
+          <li class="p-2">
+            <a
+              class="underline underline-offset-4"
+              href="/index.html#pricing"
+              onclick="redirectPage()"
+              >PRICING</a
+            >
+          </li>
+          <li class="p-2">
+            <a
+              class="underline underline-offset-4"
+              href="/faq.html"
+              onclick="redirectPage()"
+              >FAQ</a
+            >
+          </li>
+          <li class="p-2">
+            <a class="underline underline-offset-4" href="/ContactUs.html"
+              >INQUIRY FORM</a
+            >
+          </li>
+          <li class="p-2">
+            <a
+              class="underline underline-offset-4"
+              href="https://zabdrivingschool.trubicars.ca/auth/mfa/signup.php"
+              target="_blank"
+              >SIGN IN</a
+            >
+          </li>
+          <li class="p-2">
+            <a
+              class="underline underline-offset-4"
+              href="https://zabdrivingschool.trubicars.ca/auth/mfa/login.php"
+              target="_blank"
+              >REGISTER</a
+            >
+          </li>
         </ul>
-    </div>
-</nav> <!-- end of navbar -->
-<!-- end of navbar -->
+      </nav>
+    </header>
 
-
-<!-- Our Offering -->
-    <div id="offering" class="basic-1">
-        <div class="page-banner page-banner-faq mb-5">
-            <h1 class="">Faq's</h1>
-        </div>
-    <div class="container">
-       
-        <div class="row">
-            <div class="col-xl-12 mr-auto">
-                <div id="accordion">
-                    <div class="card">
-                      <div class="card-header" id="heading1">
-                        <h5 class="mb-0">
-                          <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse1" aria-expanded="true" aria-controls="collapse1">
-                            Q.1 Does your school conduct ministry approved courses?
-                          </button>
-                        </h5>
-                      </div>
-                      <div id="collapse1" class="collapse show" aria-labelledby="heading1" data-parent="#accordion">
-                        <div class="card-body">
-                          Our school is ministry approved therefore we conduct beginner Drivers     Education course which is under the guidelines and supervision of MTO.
-                        </div>
-                      </div>
-                    </div>
-
-
-                    <div class="card">
-                      <div class="card-header" id="heading2">
-                        <h5 class="mb-0">
-                          <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
-                            Q.2 What all do you provide in a BDE course?
-                          </button>
-                        </h5>
-                      </div>
-                      <div id="collapse2" class="collapse" aria-labelledby="heading2" data-parent="#accordion">
-                        <div class="card-body">
-                          We provide 30 hours of online self study course material including videos and assignments and 10 hours of in car one on one lessons.
-                        </div>
-                      </div>
-                    </div>
-
-
-                    <div class="card">
-                      <div class="card-header" id="heading3">
-                        <h5 class="mb-0">
-                          <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
-                            Q.3 Can I start the course before the age of 16?
-                          </button>
-                        </h5>
-                      </div>
-                      <div id="collapse3" class="collapse" aria-labelledby="heading3" data-parent="#accordion">
-                        <div class="card-body">
-                          Driving course can be undertaken any time but in car lessons can only be taken after you acquire G1 license. Age requirement for G1 is 16 years.
-                        </div>
-                      </div>
-                    </div>
-
-                    <div class="card">
-                      <div class="card-header" id="heading4">
-                        <h5 class="mb-0">
-                          <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
-                            Q.4 Do you provide insurance certificate after qualifying the course?
-                          </button>
-                        </h5>
-                      </div>
-                      <div id="collapse4" class="collapse" aria-labelledby="heading4" data-parent="#accordion">
-                        <div class="card-body">
-                          If you take a course at any ministry approved driving school like ours then you qualify for the insurance certificate. This certificate is issued by ministry through Service Ontario after you pass your G2.
-                        </div>
-                      </div>
-                    </div>
-
-
-
-                    <div class="card">
-                      <div class="card-header" id="heading5">
-                        <h5 class="mb-0">
-                          <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse5" aria-expanded="false" aria-controls="collapse5">
-                            Q.5 How much time do you provide to complete the course? How much time is required to complete the course on fast track?
-                          </button>
-                        </h5>
-                      </div>
-                      <div id="collapse5" class="collapse" aria-labelledby="heading5" data-parent="#accordion">
-                        <div class="card-body">
-                          We give one year to complete the course however if someone wants to finish it fast, we will help you to do that. You also have to be available to get scheduled any time in coordination with your in car instructor. You are also required to finish 30 hours online course in your own time at a faster pace.
-
-                        </div>
-                      </div>
-                    </div>
-                    <div class="card">
-                      <div class="card-header" id="heading6">
-                        <h5 class="mb-0">
-                          <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse6" aria-expanded="false" aria-controls="collapse6">
-                            Q.6  Do I have to be available for online course with instructor?
-                          </button>
-                        </h5>
-                      </div>
-                      <div id="collapse6" class="collapse" aria-labelledby="heading6" data-parent="#accordion">
-                        <div class="card-body">
-                          No, it is fully independent study, in your own place, at your own pace. All time will be recorded. You don't have to be available before instructor however he is observing all your self study at the background.
-                        </div>
-                      </div>
-                    </div>
-                    <div class="card">
-                      <div class="card-header" id="heading7">
-                        <h5 class="mb-0">
-                          <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse7" aria-expanded="false" aria-controls="collapse7">
-                            Q.7  Can I also get the certificate if I just do few in car lessons?
-                          </button>
-                        </h5>
-                      </div>
-                      <div id="collapse7" class="collapse" aria-labelledby="heading7" data-parent="#accordion">
-                        <div class="card-body">
-                          No, you qualify for certificate only after you fulfil requirements mentioned in Q 2.
-                        </div>
-                      </div>
-                    </div>
-                    <div class="card">
-                      <div class="card-header" id="heading8">
-                        <h5 class="mb-0">
-                          <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse8" aria-expanded="false" aria-controls="collapse8">
-                            Q.8	How do I start if I am ready to undergo a course at your school?
-                          </button>
-                        </h5>
-                      </div>
-                      <div id="collapse8" class="collapse" aria-labelledby="heading8" data-parent="#accordion">
-                        <div class="card-body">
-                          <ol>
-                            <li>Open our website <a href="www.zabdrivingschool.com" target="_blank">www.zabdrivingschool.com</a></li>
-                              <li>Click on Registration tab and submit after filling in all details. Get in touch with us for payment and we send you the link to start online course. Side by side you can get in touch with us to get your in-car lessons scheduled.
-                              </li>
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
-
-
-                    <div class="card">
-                      <div class="card-header" id="heading9">
-                        <h5 class="mb-0">
-                          <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse9" aria-expanded="false" aria-controls="collapse9">
-                            Q.9	Will I be using my own car for in car lessons?
-                          </button>
-                        </h5>
-                      </div>
-                      <div id="collapse9" class="collapse" aria-labelledby="heading9" data-parent="#accordion">
-                        <div class="card-body">
-                          Car is not your problem. Your driving instructor will bring his car which is equipped with extra brake for the instructor for safety.
-                        </div>
-                      </div>
-                    </div>
-
-
-                    <div class="card">
-                      <div class="card-header" id="heading10">
-                        <h5 class="mb-0">
-                          <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse10" aria-expanded="false" aria-controls="collapse10">
-                            Q.10	Which payment options do you accept, and do you have any easy payment plan?
-                          </button>
-                        </h5>
-                      </div>
-                      <div id="collapse10" class="collapse" aria-labelledby="heading10" data-parent="#accordion">
-                        <div class="card-body">
-                          You can pay through your debit/credit card online through our website, after you Register. Or through Interac Etransfer on (<a href="mailto:oakville@zabdrivingschool.com" target="_blank">oakville@zabdrivingschool.com</a>) or through machine available with our driving instructor (only after coordinating with him). Yes, we do offer payment through 2-3 easy installments.
-                        </div>
-                      </div>
-                    </div>
-
-
-                    <div class="card">
-                      <div class="card-header" id="heading11">
-                        <h5 class="mb-0">
-                          <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse11" aria-expanded="false" aria-controls="collapse11">
-                            Q.11	Who will book my road test? Is road test fee also included in the BDE course fee?
-                          </button>
-                        </h5>
-                      </div>
-                      <div id="collapse11" class="collapse" aria-labelledby="heading11" data-parent="#accordion">
-                        <div class="card-body">
-                          You can book road test on Drive Test website <a href="www.drivetest.ca" target="black">www.drivetest.ca</a>
-
-•	Your driving instructor can help you booking but the road test booking or use of instructors car for road test is not included in BDE course fee. You may read the Car Rental Fee for test on our Pricing Tab of our website.
-.
-                        </div>
-                      </div>
-                    </div>
-
-                    <div class="card">
-                      <div class="card-header" id="heading12">
-                        <h5 class="mb-0">
-                          <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse12" aria-expanded="false" aria-controls="collapse12">
-                            Q.12	Do I have any other benefit of BDE course, other than Insurance Certifcate.
-                          </button>
-                        </h5>
-                      </div>
-                      <div id="collapse12" class="collapse" aria-labelledby="heading12" data-parent="#accordion">
-                        <div class="card-body">
-                          In normal circumstances, after obtaining G1 license, you can appear in road test after one year. If you undertake BDE course, you may qualify to appear in road test after 8 months.
-                        </div>
-                      </div>
-                    </div>
-
-
-                    <div class="card">
-                      <div class="card-header" id="heading13">
-                        <h5 class="mb-0">
-                          <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse13" aria-expanded="false" aria-controls="collapse13">
-                           Q.13 I am a new immigrant. I also have background experience of driving. Do I have to undertake BDE course?
-                          </button>
-                        </h5>
-                      </div>
-                      <div id="collapse13" class="collapse" aria-labelledby="heading13" data-parent="#accordion">
-                        <div class="card-body">
-                          You don't have to undertake BDE course if your experience was added at the time of enrollment for G1 License. You don't have to wait for one year or 8 months to appear in road test. BDE course, however may offer you Insurance discount which is not possible even if you had background experience. For getting the benefit of insurance, it is recommended to undertake BDE course. 
-
-
-                        </div>
-                      </div>
-                    </div>
-
-                  </div>
-               
-
-            </div> 
-             <!-- end of col -->
-        </div> <!-- end of row -->
-    </div> <!-- end of container -->
-</div> <!-- end of basic-2 -->
-
-
-
-    <!-- Footer -->
-    <div class="footer">
-      <div class="container pt-4">
-          <div class="row">
-              <div class="col-md-4">
-                  <div class="text-container about">
-                      <h4>POSTAL ADRESS</h4>
-                      <p class="white">ZAB DRIVING SCHOOL
-                                          <br>56 Fahey Drive,<br>Brampton, ON, L6Y0N8<br>Phone: 289-400-8115<br>Email: oakville@zabdrivingschool.com</p>
-                  </div> <!-- end of text-container -->
-              </div> <!-- end of col -->
-      <div class="col-md-2">
-
-              </div> <!-- end of col -->	 
-              <div class="col-md-6">
-               <div class="text-container about text-md-right bg-sm-danger"> 
-                  <h6 class="text-white"><a class="text-white" href="https://trubicars.ca/g1-practice-tests?affiliates=95&acct=acct_1N6JLMCS94LnWjd4" target="_blank">Free Practice G1 Knowledge Test</a></h6>    
-                  <h6 class="text-white"><a class="text-white" href=" https://trubicars.ca/g2-road-test-ontario?affiliates=96&acct=acct_1N6JLMCS94LnWjd4" target="_blank">Practice G2 Test</a></h6> 
-               </div> <!-- end of text-container -->
-              </div> <!-- end of col --
-              
-          </div> <!-- end of row -->
-      </div> <!-- end of container -->
-  </div> <!-- end of footer -->  
-  <!-- end of footer -->
-
-
-  <!-- Copyright -->
-  <div class="copyright">
-      <div class="container">
-          <div class="row">
-              <div class="col-lg-12">
-                  <p class="p-small">ZAB Driving School Oakville © All rights reserved.</p>
-              </div> <!-- end of col -->
-          </div> <!-- enf of row -->
-      </div> <!-- end of container -->
-  </div> <!-- end of copyright --> 
-  <!-- end of copyright -->
-  
-    
-  <!-- Scripts -->
-  <script src="https://www.zabdrivingschool.com/js/jquery.min.js"></script> <!-- jQuery for Bootstrap's JavaScript plugins -->
-  <script src="https://www.zabdrivingschool.com/js/popper.min.js"></script> <!-- Popper tooltip library for Bootstrap -->
-  <script src="https://www.zabdrivingschool.com/js/bootstrap.min.js"></script> <!-- Bootstrap framework -->
-  <script src="https://www.zabdrivingschool.com/js/jquery.easing.min.js"></script> <!-- jQuery Easing for smooth scrolling between anchors -->
-  <script src="https://www.zabdrivingschool.com/js/swiper.min.js"></script> <!-- Swiper for image and text sliders -->
-  <script src="https://www.zabdrivingschool.com/js/jquery.magnific-popup.js"></script> <!-- Magnific Popup for lightboxes -->
-  <script src="https://www.zabdrivingschool.com/js/morphext.min.js"></script> <!-- Morphtext rotating text in the header -->
-  <script src="https://www.zabdrivingschool.com/js/isotope.pkgd.min.js"></script> <!-- Isotope for filter -->
-  <script src="https://www.zabdrivingschool.com/js/validator.min.js"></script> <!-- Validator.js - Bootstrap plugin that validates forms -->
-  <script src="https://www.zabdrivingschool.com/js/scripts.js"></script> <!-- Custom scripts -->
-</body>
+    <section id="faq">
+      <div class="bg-white px-6 py-16">
+        <h1 class="text-black mb-6">Frequently Asked Questions</h1>
+        <ul class="flex flex-col gap-6">
+          <li
+          >
+            <span>Q.1 Does your school conduct ministry approved courses?</span>
+            <p class="font-sans">
+              Our school is ministry approved therefore we conduct beginner Drivers Education course which is under the guidelines and supervision of MTO.
+            </p>
+        </li>
+          <li
+          
+          >
+            <span>Q.2 What all do you provide in a BDE course?</span>
+            <p class="font-sans">
+              We provide 30 hours of online self study course material including videos
+and assignments and 10 hours of in car one on one lessons.
+            </p>
+        </li>
+          <li
+          
+          >
+            <span>Q.3 Can I start the course before the age of 16?</span>
+            <p class="font-sans">
+              Driving course can be undertaken any time but in car lessons can only be
+taken after you acquire G1 license. Age requirement for G1 is 16 years.
+            </p>
+        </li>
+          <li
+          
+          >
+            <span>Q.4 Do you provide insurance certificate after qualifying the course?</span>
+            <p class="font-sans">
+              If you take a course at any ministry approved driving school like ours then
+you qualify for the insurance certificate. This certificate is issued by ministry
+through Service Ontario after you pass your G2.
+            </p>
+        </li>
+          <li
+          
+          >
+            <span>Q.5 How much time do you provide to complete the course? How much time is
+              required to complete the course on fast track?</span>
+            <p class="font-sans">
+              We give one year to complete the course however if someone wants to
+finish it fast, we will help you to do that. You also have to be available to get
+scheduled any time in coordination with your in car instructor. You are also
+required to finish 30 hours online course in your own time at a faster pace.
+            </p>
+        </li>
+          <li
+          
+          >
+            <span>Q.6 Do I have to be available for online course with instructor?</span>
+            <p class="font-sans">
+              No, it is fully independent study, in your own place, at your own pace. All
+time will be recorded. You don’t have to be available before instructor however
+he is observing all your self study at the background.
+            </p>
+        </li>
+          <li
+          
+          >
+            <span>Q.7 Can I also get the certificate if I just do few in car lessons?</span>
+            <p class="font-sans">
+              No, you qualify for certificate only after you fulfil requirements mentioned
+in Q 2.
+            </p>
+        </li>
+          <li
+          
+          >
+            <span>Q.8 How do I start if I am ready to undergo a course at your school?</span>
+            <p class="font-sans">Open our website <a href="https://www.zabdrivingschool.com">www.zabdrivingschool.com</a>
+            </p>
+            <p class="font-sans">Click on Registration tab and submit after filling in all details. Get in touch
+              with us for payment and we send you the link to start online course. Side by side
+              you can get in touch with us to get your in-car lessons scheduled.</p>
+        </li>
+          <li
+          
+          >
+            <span>Q.9 Will I be using my own car for in car lessons?</span>
+            <p class="font-sans">Car is not your problem. Your driving instructor will bring his car which is
+              equipped with extra brake for the instructor for safety.
+            </p>
+        </li>
+          <li
+          
+          >
+            <span>Q.10 Which payment options do you accept, and do you have any easy
+              payment plan?</span>
+            <p class="font-sans">
+              You can pay through your debit/credit card online through our website,
+after you Register. Or through Interac Etransfer on
+(<a href="mailto:oakville@zabdrivingschool.com">oakville@zabdrivingschool.com</a>) or through machine available with our driving
+instructor (only after coordinating with him). Yes, we do offer payment through 2-
+3 easy installments.
+            </p>
+        </li>
+          <li
+          
+          >
+            <span>Q.11 Who will book my road test? Is road test fee also included in the BDE
+              course fee?</span>
+            <p class="font-sans">
+              You can book road test on Drive Test website <a href="https://www.drivetest.ca">www.drivetest.ca</a>
+            </p>
+            <p class="font-sans">Your driving instructor can help you booking but the road test booking or use of
+              instructors car for road test is not included in BDE course fee. You may read the
+              Car Rental Fee for test on our Pricing Tab of our website.</p>
+        </li>
+          <li
+          
+          >
+            <span>Q.12 Do I have any other benefit of BDE course, other than Insurance
+              Certifcate?</span>
+            <p class="font-sans">
+              In normal circumstances, after obtaining G1 license, you can appear in
+road test after one year. If you undertake BDE course, you may qualify to appear
+in road test after 8 months.
+            </p>
+        </li>
+          <li
+          
+          >
+            <span>Q.13 I am a new immigrant. I also have background experience of driving. Do I
+              have to undertake BDE course?</span>
+            <p class="font-sans">
+              You don’t have to undertake BDE course if your experience was added at
+the time of enrollment for G1 License. You don’t have to wait for one year or 8
+months to appear in road test. BDE course, however may offer you Insurance
+discount which is not possible even if you had background experience. For
+getting the benefit of insurance, it is recommended to undertake BDE course.
+            </p>
+        </li>
+      </div>
+      </ul>
+    </section>
+    <script>
+      let navClass = "";
+      let navbar = document.querySelector("header.navigation");
+      function toggleNav() {
+        if (navbar.classList.contains("open")) {
+          navbar.classList.remove("open");
+        } else {
+          navbar.classList.add("open");
+        }
+      }
+      function redirectPage() {
+        toggleNav();
+        setTimeout(function () {
+          return true;
+        }, 500);
+      }
+    </script>
+  </body>
 </html>

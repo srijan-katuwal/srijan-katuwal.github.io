@@ -1,208 +1,319 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
     <!-- SEO Meta Tags -->
-    
+
     <!-- Website Title -->
     <title>Contact us - ZAB Driving School</title>
-    
+
     <!-- Styles -->
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:500,700&display=swap&subset=latin-ext" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600&display=swap&subset=latin-ext" rel="stylesheet">
-    <link href="https://www.zabdrivingschool.com/css/bootstrap.css" rel="stylesheet">
-    <link href="https://www.zabdrivingschool.com/css/fontawesome-all.css" rel="stylesheet">
-    <link href="https://www.zabdrivingschool.com/css/swiper.css" rel="stylesheet">
-	<link href="https://www.zabdrivingschool.com/css/magnific-popup.css" rel="stylesheet">
-	<link href="https://www.zabdrivingschool.com/css/styles.css" rel="stylesheet">
-    <link rel="stylesheet" href="./css/mystyles.css">
-	
-	<!-- Favicon  -->
-    <link rel="icon" href="https://www.zabdrivingschool.com/images/Picture1.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,400;1,500;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://www.zabdrivingschool.com/css/bootstrap.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://www.zabdrivingschool.com/css/fontawesome-all.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://www.zabdrivingschool.com/css/magnific-popup.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://www.zabdrivingschool.com/css/styles.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/mystyles.css" />
     <style>
-      
+      button {
+        background-color: #14bf98 !important;
+      }
     </style>
-</head>
-<body data-spy="scroll" data-target=".fixed-top">
-    
+
+    <!-- Favicon  -->
+    <link
+      rel="icon"
+      href="https://www.zabdrivingschool.com/images/Picture1.png"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              black: "#30373F",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body data-spy="scroll" data-target=".fixed-top">
     <!-- Preloader -->
-	<div class="spinner-wrapper">
-        <div class="spinner">
-            <div class="bounce1"></div>
-            <div class="bounce2"></div>
-            <div class="bounce3"></div>
-        </div>
-    </div>
     <!-- end of preloader -->
-    
 
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-md navbar-dark navbar-custom fixed-top">
-        <!-- Text Logo - Use this if you don't have a graphic logo -->
-        <!-- <a class="navbar-brand logo-text page-scroll" href="index.html">Aria</a> -->
-
-        <!-- Image Logo -->
-        <a class="navbar-brand logo-image" href="index.html"><img loading="lazy" src="images/logo.png" alt="alternative"></a>
-        
-        <!-- Mobile Menu Toggle Button -->
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-awesome fas fa-bars"></span>
-            <span class="navbar-toggler-awesome fas fa-times"></span>
-        </button>
-        <!-- end of mobile menu toggle button -->
-
-        <div class="collapse navbar-collapse" id="navbarsExampleDefault">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                    <a class="nav-link page-scroll" href="index.html">HOME </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link page-scroll" href="AboutUs.html" >ABOUT US</a>
-                    </li>
-                <li class="nav-item">
-                    <a class="nav-link page-scroll" href="OurMission.html">OUR MISSION</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link page-scroll" href="OurOffering.html">OUR OFFERING</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link page-scroll" href="faq.html">FAQ</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link page-scroll" href="Pricing.html">PRICING</a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link page-scroll" href="ContactUs.html">INQUIRY FORM</a>
-                </li>
-                
-               
-                <li class="nav-item">
-                    <a class="nav-link page-scroll" href="https://zabdrivingschool.trubicars.ca/auth/mfa/signup.php" target="_blank">REGISTER</a>
-                </li>
-	 <li class="nav-item">
-                    <a class="nav-link page-scroll" href="https://zabdrivingschool.trubicars.ca/auth/mfa/login.php" target="_blank">SIGN IN</a>
-                </li>
-            
-            </ul>
+    <header class="navigation fixed z-10 w-full bg-white shadow-black top-0">
+      <nav class="relative">
+        <div class="pl-2 pr-4 flex justify-between items-center h-20">
+          <a href="/">
+            <img class="h-16" src="./images/logo.png" />
+          </a>
+          <img
+            id="nav-toggler"
+            src="./images/burger.svg"
+            onclick="toggleNav()"
+          />
         </div>
-    </nav> <!-- end of navbar -->
+        <ul class="absolute flex flex-col gap-1 top-0 bg-white h-screen">
+          <li class="absolute top-1 left-4">
+            <a href="/"><img class="h-16" src="./images/logo.png" /></a>
+          </li>
+          <li class="absolute top-6 right-6">
+            <img src="./images/times.svg" onclick="toggleNav()" />
+          </li>
+          <li class="p-2">
+            <a
+              class="underline underline-offset-4"
+              href="/"
+              onclick="redirectPage()"
+              >HOME</a
+            >
+          </li>
+          <li class="p-2">
+            <a
+              class="underline underline-offset-4"
+              href="/index.html#about"
+              onclick="redirectPage()"
+              >ABOUT US</a
+            >
+          </li>
+          <li class="p-2">
+            <a
+              class="underline underline-offset-4"
+              href="/index.html#mission"
+              onclick="redirectPage()"
+              >OUR MISSION</a
+            >
+          </li>
+          <li class="p-2">
+            <a
+              class="underline underline-offset-4"
+              href="/OurOffering.html"
+              onclick="redirectPage()"
+              >OUR OFFERING</a
+            >
+          </li>
+          <li class="p-2">
+            <a
+              class="underline underline-offset-4"
+              href="/index.html#pricing"
+              onclick="redirectPage()"
+              >PRICING</a
+            >
+          </li>
+          <li class="p-2">
+            <a
+              class="underline underline-offset-4"
+              href="/faq.html"
+              onclick="redirectPage()"
+              >FAQ</a
+            >
+          </li>
+          <li class="p-2">
+            <a class="underline underline-offset-4" href="/ContactUs.html"
+              >INQUIRY FORM</a
+            >
+          </li>
+          <li class="p-2">
+            <a
+              class="underline underline-offset-4"
+              href="https://zabdrivingschool.trubicars.ca/auth/mfa/signup.php"
+              target="_blank"
+              >SIGN IN</a
+            >
+          </li>
+          <li class="p-2">
+            <a
+              class="underline underline-offset-4"
+              href="https://zabdrivingschool.trubicars.ca/auth/mfa/login.php"
+              target="_blank"
+              >REGISTER</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <!-- end of navbar -->
     <!-- end of navbar -->
 
-
-  <!-- Inquiry Form -->
-  <div id="contact" class="form-2">
-    <div class="container">
+    <!-- Inquiry Form -->
+    <section id="contact" class="px-1">
+      <div class="container">
         <div class="row">
-            <div class="col-lg-6">
-                <div class="text-container">
-                    <div class="d-block custom-secondary text-uppercase text-secondary section-title">INQUIRY FORM</div>
-                    <h2>Get In Touch Using This Form</h2>
-                    <p>After the global pandemic, we started operating from home for all office work and registrations. Presently, instead of in-class courses, learning is conducted through our digital/online program. This is also more convenient for students who are very busy with their day to day routine. All in-car lessons will be conducted one-on-one basis on the streets of Brampton/Oakville. Pick and drop shall be made by instructor from anywhere in the local city at your convenience.</p>
-                   <p>You may fill up the form below or call us and we will get back to you on all your enquiries.</p>
-                    <ul class="list-unstyled li-space-lg">
-                        <li class="address"><i class="fas fa-map-marker-alt"></i>ZAB DRIVING SCHOOL 56 Fahey Drive, Brampton, ON, L6Y0N8
-                            </li>
-                        <li><i class="fas fa-phone"></i><a href="tel:003024630820">289-400-8115</a></li>
-                        <li><i class="fas fa-envelope"></i><a href="mailto:Oakville@zabdrivingschool.com">Oakville@zabdrivingschool.com</a></li>
-                    </ul>
-                   </div> <!-- end of text-container -->
-            </div> <!-- end of col -->
-            <div class="col-lg-6">
-                
-                <!-- Contact Form -->
-                <form id="contactForm" data-toggle="validator" data-focus="false">
-                    <div class="form-group">
-                        <input type="text" class="form-control-input" id="cname" required>
-                        <label class="label-control" for="cname">Name</label>
-                        <div class="help-block with-errors"></div>
-                    </div>
+          <div class="col-lg-6">
+            <div class="text-container">
+              <div
+                class="d-block custom-secondary text-uppercase text-secondary section-title"
+              >
+                INQUIRY FORM
+              </div>
+              <h2 class="text-emerald-500">Get In Touch Using This Form</h2>
+              <p class="mt-3 text-black">
+                After the global pandemic, we started operating from home for
+                all office work and registrations. Presently, instead of
+                in-class courses, learning is conducted through our
+                digital/online program. This is also more convenient for
+                students who are very busy with their day to day routine. All
+                in-car lessons will be conducted one-on-one basis on the streets
+                of Brampton/Oakville. Pick and drop shall be made by instructor
+                from anywhere in the local city at your convenience.
+              </p>
+              <p class="mt-3 text-black">
+                You may fill up the form below or call us and we will get back
+                to you on all your enquiries.
+              </p>
+              <p class="text-black mt-4 flex items-start gap-2">
+                <img
+                  src="./images/location.svg"
+                  width="18px"
+                  height="18px"
+                  class="mt-1"
+                /><span
+                  >ZAB DRIVING SCHOOL 56 Fahey Drive, Brampton, ON, L6Y0N8</span
+                >
+              </p>
+              <p class="text-black mt-4 flex items-start gap-2">
+                <img src="./images/mail.svg" width="22px" height="18px" /><a
+                  href="mailto:Oakville@zabdrivingschool.com"
+                  >Oakville@zabdrivingschool.com</a
+                >
+              </p>
+              <p class="text-black mt-4 flex items-start gap-2">
+                <img
+                  src="./images/telephone.svg"
+                  width="18px"
+                  height="18px"
+                  class="mt-1"
+                /><a href="tel:289-400-8115">289-400-8115</a>
+              </p>
+            </div>
+            <!-- end of text-container -->
+          </div>
+          <!-- end of col -->
+          <div class="col-lg-6 mt-20">
+            <!-- Contact Form -->
+            <form id="contactForm" data-toggle="validator" data-focus="false">
+              <div class="form-group">
+                <input
+                  type="text"
+                  class="form-control-input"
+                  id="cname"
+                  required
+                />
+                <label class="label-control" for="cname">Name</label>
+                <div class="help-block with-errors"></div>
+              </div>
 
-                    <div class="form-group">
-                        <input type="text" class="form-control-input" id="cphone" required>
-                        <label class="label-control" for="cphone">Phone No</label>
-                        <div class="help-block with-errors"></div>
-                    </div>
+              <div class="form-group">
+                <input
+                  type="text"
+                  class="form-control-input"
+                  id="cphone"
+                  required
+                />
+                <label class="label-control" for="cphone">Phone No</label>
+                <div class="help-block with-errors"></div>
+              </div>
 
-                    <div class="form-group">
-                        <input type="email" class="form-control-input" id="cemail" required>
-                        <label class="label-control" for="cemail">Email</label>
-                        <div class="help-block with-errors"></div>
-                    </div>
-                    <div class="form-group">
-                        <textarea class="form-control-textarea" id="cmessage" required></textarea>
-                        <label class="label-control" for="cmessage">Your message</label>
-                        <div class="help-block with-errors"></div>
-                    </div>
-                   
-                    <div class="form-group">
-                        <button type="submit" class="form-control-submit-button">SUBMIT MESSAGE</button>
-                    </div>
-                    <div class="form-message">
-                        <div id="cmsgSubmit" class="h3 text-center hidden"></div>
-                    </div>
-                </form>
-                <!-- end of contact form -->
+              <div class="form-group">
+                <input
+                  type="email"
+                  class="form-control-input"
+                  id="cemail"
+                  required
+                />
+                <label class="label-control" for="cemail">Email</label>
+                <div class="help-block with-errors"></div>
+              </div>
+              <div class="form-group">
+                <textarea
+                  class="form-control-textarea"
+                  id="cmessage"
+                  required
+                ></textarea>
+                <label class="label-control" for="cmessage">Your message</label>
+                <div class="help-block with-errors"></div>
+              </div>
 
-            </div> <!-- end of col -->
-        </div> <!-- end of row -->
-    </div> <!-- end of container -->
-</div> <!-- end of form-2 -->
-<!-- Inquiry Form -->
+              <div class="form-group">
+                <button type="submit" class="form-control-submit-button">
+                  SUBMIT MESSAGE
+                </button>
+              </div>
+              <div class="form-message">
+                <div id="cmsgSubmit" class="h3 text-center hidden"></div>
+              </div>
+            </form>
+            <!-- end of contact form -->
+          </div>
+          <!-- end of col -->
+        </div>
+        <!-- end of row -->
+      </div>
+      <!-- end of container -->
+    </section>
+    <!-- end of form-2 -->
+    <!-- Inquiry Form -->
 
-
-    <!-- Footer -->
-    <div class="footer">
-        <div class="container pt-4">
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="text-container about">
-                        <h4>POSTAL ADRESS</h4>
-                        <p class="white">ZAB DRIVING SCHOOL
-                                            <br>56 Fahey Drive,<br>Brampton, ON, L6Y0N8<br>Phone: 289-400-8115<br>Email: oakville@zabdrivingschool.com</p>
-                    </div> <!-- end of text-container -->
-                </div> <!-- end of col -->
-				<div class="col-md-2">
-
-                </div> <!-- end of col -->	 
-                <div class="col-md-6">
-                 <div class="text-container about text-md-right bg-sm-danger"> 
-                    <h6 class="text-white"><a class="text-white" href="https://trubicars.ca/g1-practice-tests?affiliates=95&acct=acct_1N6JLMCS94LnWjd4" target="_blank">Free Practice G1 Knowledge Test</a></h6>    
-                    <h6 class="text-white"><a class="text-white" href=" https://trubicars.ca/g2-road-test-ontario?affiliates=96&acct=acct_1N6JLMCS94LnWjd4" target="_blank">Practice G2 Test</a></h6> 
-                 </div> <!-- end of text-container -->
-                </div> <!-- end of col --
-                
-            </div> <!-- end of row -->
-        </div> <!-- end of container -->
-    </div> <!-- end of footer -->  
-    <!-- end of footer -->
-
-
-    <!-- Copyright -->
-    <div class="copyright">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <p class="p-small">ZAB Driving School Oakville © All rights reserved.</p>
-                </div> <!-- end of col -->
-            </div> <!-- enf of row -->
-        </div> <!-- end of container -->
-    </div> <!-- end of copyright --> 
-    <!-- end of copyright -->
-    
-    	
     <!-- Scripts -->
-    <script src="https://www.zabdrivingschool.com/js/jquery.min.js"></script> <!-- jQuery for Bootstrap's JavaScript plugins -->
-    <script src="https://www.zabdrivingschool.com/js/popper.min.js"></script> <!-- Popper tooltip library for Bootstrap -->
-    <script src="https://www.zabdrivingschool.com/js/bootstrap.min.js"></script> <!-- Bootstrap framework -->
-    <script src="https://www.zabdrivingschool.com/js/jquery.easing.min.js"></script> <!-- jQuery Easing for smooth scrolling between anchors -->
-    <script src="https://www.zabdrivingschool.com/js/swiper.min.js"></script> <!-- Swiper for image and text sliders -->
-    <script src="https://www.zabdrivingschool.com/js/jquery.magnific-popup.js"></script> <!-- Magnific Popup for lightboxes -->
-    <script src="https://www.zabdrivingschool.com/js/morphext.min.js"></script> <!-- Morphtext rotating text in the header -->
-    <script src="https://www.zabdrivingschool.com/js/isotope.pkgd.min.js"></script> <!-- Isotope for filter -->
-    <script src="https://www.zabdrivingschool.com/js/validator.min.js"></script> <!-- Validator.js - Bootstrap plugin that validates forms -->
-    <script src="https://www.zabdrivingschool.com/js/scripts.js"></script> <!-- Custom scripts -->
-</body>
+    <script src="https://www.zabdrivingschool.com/js/jquery.min.js"></script>
+    <!-- jQuery for Bootstrap's JavaScript plugins -->
+    <script src="https://www.zabdrivingschool.com/js/popper.min.js"></script>
+    <!-- Popper tooltip library for Bootstrap -->
+    <script src="https://www.zabdrivingschool.com/js/bootstrap.min.js"></script>
+    <!-- Bootstrap framework -->
+    <script src="https://www.zabdrivingschool.com/js/jquery.easing.min.js"></script>
+    <!-- jQuery Easing for smooth scrolling between anchors -->
+    <script src="https://www.zabdrivingschool.com/js/validator.min.js"></script>
+    <!-- Validator.js - Bootstrap plugin that validates forms -->
+    <script src="https://www.zabdrivingschool.com/js/scripts.js"></script>
+    <!-- Custom scripts -->
+
+    <script>
+      let navClass = "";
+      let navbar = document.querySelector("header.navigation");
+      function toggleNav() {
+        if (navbar.classList.contains("open")) {
+          navbar.classList.remove("open");
+        } else {
+          navbar.classList.add("open");
+        }
+      }
+      function redirectPage() {
+        toggleNav();
+        setTimeout(function () {
+          return true;
+        }, 500);
+      }
+    </script>
+  </body>
 </html>

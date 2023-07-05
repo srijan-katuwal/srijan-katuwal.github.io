@@ -33,78 +33,9 @@
         },
       };
     </script>
-    <style>
-      * {
-        font-family: "Roboto", sans-serif;
-      }
-      .gradient-background {
-        background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7));
-      }
-      h1,
-      .h1 {
-        font-size: 32px !important;
-        font-family: "Roboto Slab", serif;
-        font-weight: 600;
-      }
-      h2,
-      .h2 {
-        font-size: 22px !important;
-        font-family: "Roboto Slab", serif;
-      }
-      p.h2 {
-        font-size: 16px !important;
-      }
-      .splide__arrow {
-        background: none !important;
-        width: auto;
-      }
-      .splide__arrow--prev {
-        left: unset !important;
-      }
-      .splide__arrow--next {
-        right: unset !important;
-        left: 80px;
-      }
-      .splide__track {
-        height: 100% !important;
-      }
-      .media-section h1,
-      .media-section h2,
-      .media-section p {
-        text-shadow: 0 0 32px black;
-      }
-      .text-shadow {
-        text-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-      }
-      .pricing-section > div {
-        background-color: #080a0b;
-      }
-      .splide__slide__second img {
-        background-position: 90%;
-      }
-      .price-card {
-        height: 330px;
-      }
-      header.navigation nav ul {
-        max-width: 0;
-        overflow: hidden;
-        padding: 6em 0;
-        transition: all 0.3s ease-in-out;
-      }
-      header.navigation.open nav ul {
-        max-width: 100%;
-        width: 100%;
-        overflow: hidden;
-        padding: 6em 1.5em;
-      }
-      #about,
-      #offering {
-        padding-top: 90px;
-        margin-top: -40px;
-      }
-    </style>
+    <link href="./css/mystyles.css" rel="stylesheet" />
   </head>
-  <div class="absolute top-0 left-0 gradient-background w-full h-full"></div>
+
   <body>
     <header class="navigation fixed z-10 w-full bg-white shadow-black top-0">
       <nav class="relative">
@@ -152,7 +83,7 @@
           <li class="p-2">
             <a
               class="underline underline-offset-4"
-              href="/index.html#offering"
+              href="/OurOffering.html"
               onclick="redirectPage()"
               >OUR OFFERING</a
             >
@@ -168,32 +99,29 @@
           <li class="p-2">
             <a
               class="underline underline-offset-4"
-              href="/ContactUs.html"
+              href="/faq.html"
               onclick="redirectPage()"
               >FAQ</a
             >
           </li>
           <li class="p-2">
-            <a
-              class="underline underline-offset-4"
-              href="/ContactUs.html"
-              onclick="redirectPage()"
+            <a class="underline underline-offset-4" href="/ContactUs.html"
               >INQUIRY FORM</a
             >
           </li>
           <li class="p-2">
             <a
               class="underline underline-offset-4"
-              href="/ContactUs.html"
-              onclick="redirectPage()"
+              href="https://zabdrivingschool.trubicars.ca/auth/mfa/signup.php"
+              target="_blank"
               >SIGN IN</a
             >
           </li>
           <li class="p-2">
             <a
               class="underline underline-offset-4"
-              href="/ContactUs.html"
-              onclick="redirectPage()"
+              href="https://zabdrivingschool.trubicars.ca/auth/mfa/login.php"
+              target="_blank"
               >REGISTER</a
             >
           </li>
@@ -566,77 +494,6 @@
       center, depending on its distance. Interac etransfer can be made on
     </p>
 
-    <section id="offering" class="offering-section px-6">
-      <h1 class="text-black">Our Offering</h1>
-      <p class="text-lg text-black mt-4">
-        Our BDE program ensures the mandatory:
-      </p>
-      <p class="text-black flex items-start gap-4 mt-6">
-        We are committed to teaching defensive driving techniques to teenagers
-        and adults in an environment where learning is fun, schedules are
-        flexible, and total customer satisfaction is guaranteed.
-      </p>
-      <p class="text-black flex items-start gap-4 mt-6">
-        <img src="/images/check.svg" />
-        20 hours online course
-      </p>
-      <p class="text-black flex items-start gap-4 mt-2">
-        <img src="/images/check.svg" />
-        10 hours of digital course
-      </p>
-      <p class="text-black flex items-start gap-4 mt-2">
-        <img src="/images/check.svg" />
-        10 hours of in-car one on one lessons
-      </p>
-      <p class="text-black flex items-start gap-4 mt-6">
-        Our Beginner Driver Education Programs is affordable to the people of
-        all ages with an easy payment plan.
-      </p>
-      <p class="text-black flex items-start gap-4 mt-4">
-        Our in class and in car instructors are certified instructors by the
-        Ministry of Transportation. They are highly experienced, professional,
-        patient and dedicated to creating a conducive learning environment.
-        Google Reviews of our students trained by ZDS speak of professionalism
-        of our staff.
-      </p>
-      <p class="text-black flex items-start gap-4 mt-4">
-        Our online/digital courses are designed to be interesting and are
-        equipped with all the necessary advanced education tools and videos. Our
-        aim is to enable a fun learning experience for our students which does
-        not become monotonous.
-      </p>
-      <p class="text-black flex items-start gap-4 mt-4">
-        Driving courses are available all year round. After registration, we
-        offer students to pick any time of the day and go through a digital
-        program. You may postpone your training if you have other commitments
-        with work or school. If you are unable to attend a session after
-        registration, make-up sessions are an option within a period of one year
-        for digital learning as well as the in- car lessons.
-      </p>
-      <p class="text-black flex items-start gap-4 mt-4">
-        Techniques: ZAB Driving School classes are designed for you to pass your
-        driving test displaying safe and expert driving skills with a strong
-        focus on defensives driving techniques. At ZAB Driving School, we teach
-        emergency maneuvers and techniques to prevent the consequences of
-        distracted driving. We aim to inculcate safe driving habits and
-        eventually hope to help the Ministry reduce the overall road-accident
-        occurrences in Ontario.
-      </p>
-      <p class="text-black flex items-start gap-4 mt-4">
-        G1 license holders may be able to qualify for a 4-month reduction in the
-        12-month minimum G1- licensing period. After passing G2 road test,
-        students qualified from ZAB Driving School may also benefit from a
-        reduction in insurance premiums.
-      </p>
-      <p class="text-black flex items-start gap-4 mt-4">
-        Our website also provides you free course on how to pass your G1 written
-        test and there another paid course on how to pass your G2 road test.
-      </p>
-      <p class="text-black flex items-start gap-4 mt-4">
-        If you have any questions or would like more information regarding our
-        program, please feel free to contact us at (289)-400-8115
-      </p>
-    </section>
     <script>
       document.addEventListener("DOMContentLoaded", function () {
         const mediaSection = document.querySelector("section.media-section");

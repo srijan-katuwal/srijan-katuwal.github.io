@@ -33,7 +33,15 @@
         },
       };
     </script>
-    <link href="./css/mystyles.css" rel="stylesheet" />
+    <link href="./css/styles.css" rel="stylesheet" />
+    <link href="./css/bootstrap.min.css" rel="stylesheet" />
+    <script src="./js/bootstrap.js"></script>
+    <style>
+      #contact p.sub-header {
+        font-size: 1.5em;
+        font-weight: bold;
+      }
+    </style>
   </head>
 
   <body>
@@ -129,77 +137,91 @@
       </nav>
     </header>
 
-    <section id="offering" class="offering-section px-6">
-      <h1 class="text-black pt-16">Our Offering</h1>
-      <p class="text-lg text-black mt-4">
-        Our BDE program ensures the mandatory:
+    <section id="contact" class="px-6">
+      <h3 class="text-black pt-16">Inquiry Form</h3>
+      <p class="mt-2 text-lg sub-header text-emerald-500">
+        Get In Touch Using This Form
       </p>
-      <p class="text-black flex items-start gap-4 mt-6">
-        We are committed to teaching defensive driving techniques to teenagers
-        and adults in an environment where learning is fun, schedules are
-        flexible, and total customer satisfaction is guaranteed.
+      <p class="text-black mt-4">
+        After the global pandemic, we started operating from home for all office
+        work and registrations. Presently, instead of in-class courses, learning
+        is conducted through our digital/online program. This is also more
+        convenient for students who are very busy with their day to day routine.
+        All in- car lessons will be conducted one-on-one basis on the streets of
+        Brampton/Oakville. Pick and drop shall be made by instructor from
+        anywhere in the local city at your convenience.
       </p>
-      <p class="text-black flex items-start gap-4 mt-6">
-        <img src="/images/check.svg" />
-        20 hours online course
+      <p class="text-black mt-4">
+        You may fill up the form below or call us and we will get back to you on
+        all your enquiries.
       </p>
-      <p class="text-black flex items-start gap-4 mt-2">
-        <img src="/images/check.svg" />
-        10 hours of digital course
+      <p class="text-black mt-4 flex items-start gap-2">
+        <img
+          src="./images/location.svg"
+          width="18px"
+          height="18px"
+          class="mt-1"
+        /><span>ZAB DRIVING SCHOOL 56 Fahey Drive, Brampton, ON, L6Y0N8</span>
       </p>
-      <p class="text-black flex items-start gap-4 mt-2">
-        <img src="/images/check.svg" />
-        10 hours of in-car one on one lessons
+      <p class="text-black mt-4 flex items-start gap-2">
+        <img src="./images/mail.svg" width="22px" height="18px" /><a
+          href="mailto:Oakville@zabdrivingschool.com"
+          >Oakville@zabdrivingschool.com</a
+        >
       </p>
-      <p class="text-black flex items-start gap-4 mt-6">
-        Our Beginner Driver Education Programs is affordable to the people of
-        all ages with an easy payment plan.
+      <p class="text-black mt-4 flex items-start gap-2">
+        <img
+          src="./images/telephone.svg"
+          width="18px"
+          height="18px"
+          class="mt-1"
+        /><a href="tel:289-400-8115">289-400-8115</a>
       </p>
-      <p class="text-black flex items-start gap-4 mt-4">
-        Our in class and in car instructors are certified instructors by the
-        Ministry of Transportation. They are highly experienced, professional,
-        patient and dedicated to creating a conducive learning environment.
-        Google Reviews of our students trained by ZDS speak of professionalism
-        of our staff.
-      </p>
-      <p class="text-black flex items-start gap-4 mt-4">
-        Our online/digital courses are designed to be interesting and are
-        equipped with all the necessary advanced education tools and videos. Our
-        aim is to enable a fun learning experience for our students which does
-        not become monotonous.
-      </p>
-      <p class="text-black flex items-start gap-4 mt-4">
-        Driving courses are available all year round. After registration, we
-        offer students to pick any time of the day and go through a digital
-        program. You may postpone your training if you have other commitments
-        with work or school. If you are unable to attend a session after
-        registration, make-up sessions are an option within a period of one year
-        for digital learning as well as the in- car lessons.
-      </p>
-      <p class="text-black flex items-start gap-4 mt-4">
-        Techniques: ZAB Driving School classes are designed for you to pass your
-        driving test displaying safe and expert driving skills with a strong
-        focus on defensives driving techniques. At ZAB Driving School, we teach
-        emergency maneuvers and techniques to prevent the consequences of
-        distracted driving. We aim to inculcate safe driving habits and
-        eventually hope to help the Ministry reduce the overall road-accident
-        occurrences in Ontario.
-      </p>
-      <p class="text-black flex items-start gap-4 mt-4">
-        G1 license holders may be able to qualify for a 4-month reduction in the
-        12-month minimum G1- licensing period. After passing G2 road test,
-        students qualified from ZAB Driving School may also benefit from a
-        reduction in insurance premiums.
-      </p>
-      <p class="text-black flex items-start gap-4 mt-4">
-        Our website also provides you free course on how to pass your G1 written
-        test and there another paid course on how to pass your G2 road test.
-      </p>
-      <p class="text-black flex items-start gap-4 mt-4">
-        If you have any questions or would like more information regarding our
-        program, please feel free to contact us at (289)-400-8115
-      </p>
+
+      <form
+        id="contactForm"
+        data-toggle="validator"
+        data-focus="false"
+        class="block mt-20"
+      >
+        <div class="form-group">
+          <input type="text" class="form-control-input" id="cname" required />
+          <label class="label-control" for="cname">Name</label>
+          <div class="help-block with-errors"></div>
+        </div>
+
+        <div class="form-group">
+          <input type="text" class="form-control-input" id="cphone" required />
+          <label class="label-control" for="cphone">Phone No</label>
+          <div class="help-block with-errors"></div>
+        </div>
+
+        <div class="form-group">
+          <input type="email" class="form-control-input" id="cemail" required />
+          <label class="label-control" for="cemail">Email</label>
+          <div class="help-block with-errors"></div>
+        </div>
+        <div class="form-group">
+          <textarea
+            class="form-control-textarea"
+            id="cmessage"
+            required
+          ></textarea>
+          <label class="label-control" for="cmessage">Your message</label>
+          <div class="help-block with-errors"></div>
+        </div>
+
+        <div class="form-group">
+          <button type="submit" class="form-control-submit-button">
+            SUBMIT MESSAGE
+          </button>
+        </div>
+        <div class="form-message">
+          <div id="cmsgSubmit" class="h3 text-center hidden"></div>
+        </div>
+      </form>
     </section>
+
     <script>
       let navClass = "";
       let navbar = document.querySelector("header.navigation");
